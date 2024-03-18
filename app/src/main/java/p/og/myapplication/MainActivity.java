@@ -53,14 +53,16 @@ TextView tv_lat, tv_lon, tv_altitude, tv_accuracy, tv_speed, tv_sensor, tv_updat
 
 
     // set all properties of Location request
+
     private void createLocationRequest() {
-            LocationRequest locationRequest = new LocationRequest.Builder()
-                    .setIntervalMillis(10000)
-                    .setFastestIntervalMillis(5000)
-                    .setPriority(Priority.PRIORITY_HIGH_ACCURACY)
-                    .build();
-        }
+        LocationRequest locationRequest = new LocationRequest.Builder()
+                .setIntervalMillis(10000)
+                .setFastestIntervalMillis(5000)
+                .setPriority(Priority.PRIORITY_HIGH_ACCURACY);
+    }
+
 
 
 
     }
+
