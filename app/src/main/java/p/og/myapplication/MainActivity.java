@@ -25,7 +25,7 @@ TextView tv_lat, tv_lon, tv_altitude, tv_accuracy, tv_speed, tv_sensor, tv_updat
 
     // The location request is a configuration file containing every setting related to FundLocationProviderClient
 
-    LocationRequest LocationRequest;
+    LocationRequest locationRequest;
 
 // Google's API for location services.The bulk of the app's features use this class.
    FusedLocationProviderClient fusedLocationProviderClient;
@@ -48,13 +48,13 @@ TextView tv_lat, tv_lon, tv_altitude, tv_accuracy, tv_speed, tv_sensor, tv_updat
         tv_address = findViewById(R.id.tv_address);
         sw_gps = findViewById(R.id.sw_gps);
         sw_locationupdates = findViewById(R.id.sw_locationsupdates);
+    }
 
 
 
     // set all properties of Location request
-
-        protected void createLocationRequest() {
-            LocationRequest locationRequest = LocationRequest.Builder()
+    private void createLocationRequest() {
+            LocationRequest locationRequest = new LocationRequest.Builder()
                     .setIntervalMillis(10000)
                     .setFastestIntervalMillis(5000)
                     .setPriority(Priority.PRIORITY_HIGH_ACCURACY)
@@ -64,4 +64,3 @@ TextView tv_lat, tv_lon, tv_altitude, tv_accuracy, tv_speed, tv_sensor, tv_updat
 
 
     }
-}
